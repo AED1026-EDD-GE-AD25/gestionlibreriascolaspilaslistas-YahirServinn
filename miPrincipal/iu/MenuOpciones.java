@@ -8,7 +8,7 @@ import listaDoble.PosicionIlegalException;
 import java.util.Scanner;
 
 public class MenuOpciones{
-    static Scanner scanner = new  Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
     static private Libreria libreria = new Libreria();
 
     public static void agregarLibro(){
