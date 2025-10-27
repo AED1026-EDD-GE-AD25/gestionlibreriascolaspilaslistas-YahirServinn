@@ -3,7 +3,6 @@ import listaDoble.ListaDoble;
 import listaDoble.PosicionIlegalException;
 import pila.Pila;
 import cola.Cola;
-
 import miPrincipal.modelo.Libro;
 
 public class ServicioDatos{
@@ -17,44 +16,23 @@ public class ServicioDatos{
         cola = new Cola<>();
         pila = new Pila<>();
     }
-
-    // Métodos para la lista
-    public void agregarALista(Libro valor) {
-        lista.agregar(valor);
-    }
-
-    public Libro obtenerDeLista(int indice) throws PosicionIlegalException {
-        return lista.getValor(indice);
-    }
-
-    // Métodos para la cola
-    public void agregarACola(Libro valor) {
-        cola.encolar(valor);
-    }
-
-    public Libro obtenerDeCola() {
-        return cola.frente();
-  
-    }
-
-    public void removerDeCola() {
-        cola.desencolar();
-        
-    }
-
-    // Métodos para la pila
-    public void agregarAPila(Libro valor) {
-        pila.apilar(valor);
-        
-    }
-
-    public Libro obtenerDePila() {
-        return pila.cima();
-        
-    }
-
-    public void removerDePila() {
-        pila.retirar();
     
-    }
+    
+    public ListaDoble<Libro> getLista() { return lista; }
+    public Cola<Libro> getCola() { return cola; }
+    public Pila<Libro> getPila() { return pila; }
+
+    
+    public void agregarALista(Libro valor) { lista.agregar(valor); }
+    public Libro obtenerDeLista(int indice) throws PosicionIlegalException { return lista.getValor(indice); }
+
+    
+    public void agregarACola(Libro valor) { cola.encolar(valor); }
+    public Libro obtenerDeCola() { return cola.frente(); }
+    public void removerDeCola() { cola.desencolar(); }
+
+    
+    public void agregarAPila(Libro valor) { pila.apilar(valor); }
+    public Libro obtenerDePila() { return pila.cima(); }
+    public void removerDePila() { pila.retirar(); }
 }
