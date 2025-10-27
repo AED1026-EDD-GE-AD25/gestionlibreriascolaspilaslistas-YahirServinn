@@ -84,13 +84,16 @@ public class Libreria {
     
     
     public Libro obtenerLibroPila(){
-        try { 
-            return pilaLibrosEliminados.pop(); 
-        } 
-        catch (NoSuchElementException e) { 
-            return null; 
-        }
+    try { 
+        
+        return pilaLibrosEliminados.pop(); 
+    } 
+    catch (NoSuchElementException e) { 
+        
+        
+        return null; 
     }
+}
     
     public Libro crearLibro(String titulo, String autor, String isbn) {
         return new Libro(titulo, autor, isbn);
