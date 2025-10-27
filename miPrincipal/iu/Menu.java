@@ -62,6 +62,6 @@ public class Menu{
     }
     
     private static void salir() {
-        System.out.println("Sesión Finalizada. ¡Hasta luego! ");
+        System.out.println("Sesión Finalizada. Hasta luego ");
     }
 }
